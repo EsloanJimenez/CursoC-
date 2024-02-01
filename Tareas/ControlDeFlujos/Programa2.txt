@@ -1,0 +1,35 @@
+using System;
+
+namespace Programa2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] numeros = new double[3];
+
+            double suma = 0;
+            double promedio = 0;
+
+            Console.WriteLine("Digite un valor entre 0 y 10");
+            Console.WriteLine("Si digita un valor menor a 0, o mayor a 10");
+            Console.WriteLine("La pregunta de 'Digite la nota' se va a repetir hasta que digite un valor correcto \n");
+
+            for (int i = 0; i < 3; i++)
+            {
+                do
+                {
+                    Console.WriteLine($"Digite la nota {i + 1} ");
+                    numeros[i] = double.Parse(Console.ReadLine());
+                } while (numeros[i] < 0 || numeros[i] > 10);
+
+                suma += numeros[i];
+                promedio = suma / numeros.Length;
+            }
+
+            if (promedio >= 7) Console.WriteLine("Promocionado");
+            else Console.WriteLine("Repetir");
+            
+        }
+    }
+}

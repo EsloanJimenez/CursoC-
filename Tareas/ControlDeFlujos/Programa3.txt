@@ -1,0 +1,35 @@
+using System;
+
+namespace Programa3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int numeros = 0;
+
+            Console.WriteLine("Digite un valor entero de 1 o 2 digitos");
+            Console.WriteLine("Si digita un valor negativo o mayor de 2 digitos");
+            Console.WriteLine("La pregunta de 'Digite un valor positivo' se va a repetir hasta que digite un valor correcto \n");
+
+            do { 
+                Console.WriteLine($"Digite un valor ");
+                numeros = int.Parse(Console.ReadLine());
+
+                if(numeros > 100 )
+                {
+                    Console.WriteLine("Digite un valor menor a 100");
+                    
+                } else if(numeros < 1)
+                {
+                    Console.WriteLine("Digite un valor mayor a 0");
+                    
+                }
+
+             } while (numeros < 1 || numeros > 99);
+
+            if (numeros >= 1 && numeros <= 9) Console.WriteLine($"El numero ingresado solo tiene 1 digito");
+            else Console.WriteLine("El numero ingresado tiene 2 digitos");
+        }
+    }
+}

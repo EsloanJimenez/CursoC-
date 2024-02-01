@@ -1,0 +1,40 @@
+using System;
+
+namespace Programa1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] numeros = new double[2];
+
+            double suma = 0;
+            double diferencia = 0;
+            double producto = 0;
+            double division = 0;
+
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine($"Digite el valor {i+1}");
+                numeros[i] = double.Parse( Console.ReadLine() );
+            }
+
+            if (numeros[0] > numeros[1])
+            {
+                suma = numeros[0] + numeros[1];
+                diferencia = numeros[0] - numeros[1];
+
+                Console.WriteLine($"\n\n La suma de los valores es: {suma}");
+                Console.WriteLine($"La diferencia de los valores es: {diferencia}");
+            }
+            else
+            {
+                producto = numeros[0] * numeros[1];
+                division = numeros[0] / numeros[1];
+
+                Console.WriteLine($"\n\n El producto de los valores es: {producto}");
+                Console.WriteLine($"La división de los valores es: {division}");
+            }
+        }
+    }
+}
