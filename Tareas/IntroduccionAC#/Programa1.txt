@@ -1,0 +1,17 @@
+using System;
+
+namespace Programa1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Cuantos metro tiene su terreno al cuadrado?");
+            double valor = double.Parse(Console.ReadLine());
+
+            double cuadrado = valor * 4;
+
+            Console.WriteLine($"Es decir que el perimetro de su terreno es de: {valor}M al cuadrado, con un total de:  {cuadrado}M");
+        }
+    }
+}
